@@ -28,4 +28,5 @@ require "httparty"
 #end
  
 for day in @days
- puts @forecast["current"]["weather"][0]["description"]
+    puts "A high of #{@forecast["daily"][day]["temp"]["max"]}"
+end

@@ -76,9 +76,14 @@
     </div>
     <div class="col-8">
       <h2> Forecast weather </h2>
-      <p>
-
-      </p>
+      
+         
+<% for day in @days %>
+  <p> <%= "#{day+1} day(s) from now: A high of #{@forecast["daily"][day]["temp"]["max"]}
+   with #{@forecast["daily"][day]["weather"][0]["description"]}"%> </p>
+<% end %>
+        
+      
     </div>
   </div>
 </div>
