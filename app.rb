@@ -18,6 +18,9 @@ get "/" do
   # make the call
   @forecast = HTTParty.get(url).parsed_response.to_hash
 
-  view "news"
+  
   ### Get the news
+  @news = HTTParty.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=15bd741879c5480bb685e21946571cd9").parsed_response.to_hash
+
+  view "news"
 end
