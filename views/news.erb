@@ -22,13 +22,66 @@
   </head>
   <body>
 
-    <div class="container mt-5">
-      <h1>News</h1>
-      <h2>
-      Today's temperature is <%= @forecast["current"]["temp"] %> degrees and the main story is <%= @news["articles"][0]["title"] %>
-
-      </h2>
+    <div class="container-fluid">
+      <h1>All the news that's fit to print</h1>
     </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2> Top Headlines </h2>
+        <p>
+            <%=
+                @headlines[0]      
+            %>
+            <a href= <%=
+                @urls[0]      
+            %> >(Link)</a>
+        </p>
+        <p>
+            <%=
+                @headlines[1]      
+            %>
+            <a href= <%=
+                @urls[1]      
+            %> >(Link)</a>
+        </p>        <p>
+            <%=
+                @headlines[2]      
+            %>
+            <a href= <%=
+                @urls[2]      
+            %> >(Link)</a>
+        </p>        <p>
+            <%=
+                @headlines[3]      
+            %>
+            <a href= <%=
+                @urls[3]      
+            %> >(Link)</a>
+        </p>        <p>
+            <%=
+                @headlines[4]      
+            %>
+            <a href= <%=
+                @urls[4]      
+            %> >(Link)</a>
+        </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <h2> Current weather </h2>
+      <p>Right now it's <%= @forecast["current"]["temp"] %> degrees with <%= @forecast["current"]["weather"][0]["description"]%></p>
+    </div>
+    <div class="col-8">
+      <h2> Forecast weather </h2>
+      <p>
+
+      </p>
+    </div>
+  </div>
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
